@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MyPlaceController@index');
 
-Route::get('/a', 'MyPlaceA@a');
+Route::get('/posts', 'PostController@posts');
 
-Route::get('/b', 'MyPlaceB@b');
+Route::get('posts/create', 'PostController@create');
 
-Route::get('/c', 'MyPlaceC@c');
+Route::get('posts/update', 'PostController@update');
 
-Route::get('/d', 'MyPlaceD@d');
+Route::get('posts/delete', 'PostController@delete');
