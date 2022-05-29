@@ -61,4 +61,33 @@ class PostController extends Controller
         $post->delete();
         dd('delete');
     }
+
+    public function firstOrCreate() {
+        $post = Post::find(1);
+        $anotherPost = [
+            'title' => 'title new 123',
+            'content' => 'content new 123',
+            'image' => 'image13.png',
+            'likes' => 23,
+            'in_published' => 1,
+        ];
+        
+        Post::firstOrCreate(['title' => "title new 123"], $anotherPost);
+
+        dd('finished');
+    }
+
+    public function updateOrCreate() {
+        $anotherPost = [
+            'title' => 'update title new 1333',
+            'content' => 'update content new 121233',
+            'image' => 'update image132.png',
+            'likes' => 23,
+            'in_published' => 1,
+        ];
+
+        Post::updateOrCreate(['title' => "title new 123"], $anotherPost);
+
+        dd('finished');
+    }
 }
