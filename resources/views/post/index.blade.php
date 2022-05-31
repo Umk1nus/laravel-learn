@@ -2,8 +2,7 @@
 @section('content')
   @foreach ( $posts as $post )
     <div>
-      <h1>{{$post->title}}</h1>
-      <p>{{$post->content}}</p>
+      {{$post->id}} {{$post->title}}
     </div>  
   @endforeach
 @endsection

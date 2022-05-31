@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MyPlaceController@index');
 
 Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store')->name('posts.store');
+
+
+
 Route::get('/main', 'MainController@index')->name('main.index');
 Route::get('/about', 'AboutController@index')->name('about.index');
 Route::get('/contacts', 'ContactsController@index')->name('contacts.index');

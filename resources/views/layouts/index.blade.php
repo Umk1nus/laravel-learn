@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <title>Document</title>
 </head>
 <body>
-  <div>
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav-item">
-          <li><a href="{{route('main.index')}}" class="item">Main</a></li>
-          <li><a href="{{route('posts.index')}}" class="item">Posts</a></li>
-          <li><a href="{{route('contacts.index')}}" class="item">Contacts</a></li>
-          <li><a href="{{route('about.index')}}" class="item">About</a></li>
-        </ul>
-      </nav>
-    </header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-warning" href="{{route('main.index')}}">Main</a>
+            <a class="nav-link text-warning" href="{{route('posts.index')}}">Posts</a>
+            <a class="nav-link text-warning" href="{{route('contacts.index')}}">Contacts</a>
+            <a class="nav-link text-warning" href="{{route('about.index')}}">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     @yield('content')
   </div>
 </body>
