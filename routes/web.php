@@ -19,6 +19,9 @@ Route::get('/posts', 'PostController@index')->name('posts.index');
 Route::get('/posts/create', 'PostController@create')->name('post.create');
 Route::post('/posts', 'PostController@store')->name('posts.store');
 Route::get('posts/{post}', 'PostController@show')->name('posts.show');
+Route::get('posts/{post}/edit', 'PostController@edit')->name('posts.edit');
+Route::patch('posts/{post}', 'PostController@update')->name('posts.update');
+Route::delete('posts/{post}', 'PostController@destroy')->name('posts.delete');
 
 
 Route::get('/main', 'MainController@index')->name('main.index');
