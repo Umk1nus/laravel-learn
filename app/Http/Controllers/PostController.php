@@ -28,4 +28,8 @@ class PostController extends Controller
         Post::create($data);
         return redirect()->route('posts.index');
     }
+
+    public function show(Post $post) {
+        return view('post.show', compact('post'));
+    }
 }

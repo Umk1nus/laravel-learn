@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MyPlaceController@index');
 
 Route::get('/posts', 'PostController@index')->name('posts.index');
-Route::get('/posts/create', 'PostController@create');
+Route::get('/posts/create', 'PostController@create')->name('post.create');
 Route::post('/posts', 'PostController@store')->name('posts.store');
-
+Route::get('posts/{post}', 'PostController@show')->name('posts.show');
 
 
 Route::get('/main', 'MainController@index')->name('main.index');
